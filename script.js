@@ -16,19 +16,91 @@
 
 
 const PLAYERS = [
+  
   {
     nickname: "DGx",
-    rank: "God of Destruction",
+    rank: "God of Destruction VI",
     main: "King",
     quotes: "Jangan biarkan apapun menganggu Tekken mu!",
     ewgfProfile: "https://www.ewgf.gg/player/3qtdnHGhGJQQ" // ganti dengan link profil EWGF pemain
   },
-  {
-    nickname: "NamaPemain",
-    rank: "Tekken God",
-    main: "Jin",
+
+{
+    nickname: "Dev",
+    rank: "Tekken Emperor",
+    main: "Kunimitsu",
     quotes: "",
-    ewgfProfile: "" // opsional
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Super Ksoo",
+    rank: "Tekken God",
+    main: "Leo",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4LiD7tdA3maT"
+  },
+  {
+    nickname: "eugeo_lucis",
+    rank: "Non Ranked Player",
+    main: "Lili, Nina, Asuka",
+    quotes: "じっとしていたってどうにもならない！",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Holybangsat",
+    rank: "God of Destruction II",
+    main: "Yoshimitsu",
+    quotes: "buang skripsi, main tekken",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "RVine.",
+    rank: "Flame Ruler",
+    main: "Heihachi, Hwoarang",
+    quotes: "",
+    ewgfProfile: "https://ewgf.gg/player/399Q5fdhft5M"
+  },
+  {
+    nickname: "Tora_",
+    rank: "God of Destruction",
+    main: "Victor",
+    quotes: "Oh là là!",
+    ewgfProfile: "https://www.ewgf.gg/player/4bMLL578jEr8"
+  },
+  {
+    nickname: "Crodius Oji-san",
+    rank: "God of Destruction II",
+    main: "Feng, Bob",
+    quotes: "Dig In",
+    ewgfProfile: "https://ewgf.gg/player/4nHQY2hGJ8EQ"
+  },
+  {
+    nickname: "TMA | Megatron",
+    rank: "God of Destruction II",
+    main: "Dragunov",
+    quotes: "",
+    ewgfProfile: "https://ewgf.gg/player/2RYmjGMqLtNr"
+  },
+  {
+    nickname: "March",
+    rank: "Tekken King",
+    main: "Lili",
+    quotes: ".",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Haizan",
+    rank: "God of Destruction III",
+    main: "Xiaoyu",
+    quotes: "Ajarin aku puh.",
+    ewgfProfile: "https://ewgf.gg/player/3tnNrGq5QE62"
+  },
+  {
+    nickname: "Aerial",
+    rank: "God of Destruction II",
+    main: "Dragunov",
+    quotes: "its never over until is over",
+    ewgfProfile: "https://ewgf.gg/player/4HA7r8eBHi8h"
   }
 ];
 

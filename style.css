@@ -207,7 +207,20 @@ h1, h2, h3, p { margin-top: 0; }
   }
 }
 
+.brand-logo {
+  display: block;
+  width: 90px;
+  height: 55px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
+@media (max-width: 560px) {
+  .brand-logo {
+    width: 70px;
+    height: 45px;
+  }
+}
 .ewgf-link {
   color: #ff5a64;
   text-decoration: none;
