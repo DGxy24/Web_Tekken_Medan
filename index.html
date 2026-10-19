@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Tekken Medan Alliance — komunitas pemain Tekken di Medan, Indonesia.">
+  <title>Tekken Medan Alliance</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="top-line"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Tekken Medan Alliance home">
+      <span class="brand-mark">TMA</span>
+      <span class="brand-copy">
+        <strong>TEKKEN MEDAN</strong>
+        <small>ALLIANCE</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="mainNav">
+      <a href="#home" data-i18n="navHome">Beranda</a>
+      <a href="#about" data-i18n="navAbout">Tentang</a>
+      <a href="#roster" data-i18n="navRoster">Pemain</a>
+      <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          <span data-i18n="heroEyebrow">
+            KOMUNITAS TEKKEN · MEDAN, SUMATERA UTARA, INDONESIA
+          </span>
+        </p>
+
+        <h1>
+          <span data-i18n="heroLine1">ONE COMMUNITY.</span><br>
+          <span class="accent" data-i18n="heroLine2">ONE FIGHT.</span>
+        </h1>
+
+        <p class="hero-description" data-i18n="heroDescription">
+          Tempat para pemain Tekken Medan terhubung, berkembang,
+          dan bertanding bersama.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#roster">
+            <span data-i18n="heroButton">LIHAT ROSTER</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="text-link" href="#about">
+            <span data-i18n="learnMore">Kenali komunitas</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-ring ring-one"></div>
+        <div class="art-ring ring-two"></div>
+        <div class="art-slash"></div>
+
+        <div class="art-caption">
+          <span>EST.</span>
+          <strong>MEDAN</strong>
+          <span>NORTH SUMATRA · ID</span>
+        </div>
+
+        <div class="art-number">01</div>
+      </div>
+
+      <div class="hero-bottom">
+        <span data-i18n="heroBottomLeft">
+          DIBANGUN OLEH PEMAIN, UNTUK PEMAIN.
+        </span>
+        <span>TEKKEN MEDAN ALLIANCE <span class="accent">/</span> TMA</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section section-wrap" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span class="section-index">01</span>
+          <span data-i18n="aboutEyebrow">TENTANG KAMI</span>
+        </p>
+
+        <h2 data-i18n="aboutTitle">
+          Built by players.<br>
+          <span class="muted">United by Tekken.</span>
+        </h2>
+      </div>
+
+      <div class="about-copy">
+        <p data-i18n="aboutText">
+          Tekken Medan Alliance adalah komunitas bagi para pemain
+          Tekken di Medan dan sekitarnya. Kami hadir untuk
+          mempertemukan pemain, berbagi pengalaman, dan membangun
+          lingkungan kompetitif yang positif.
+        </p>
+
+        <p class="about-note" data-i18n="aboutNote">
+          Bersama di arena. Bertumbuh sebagai komunitas.
+        </p>
+      </div>
+    </section>
+
+    <!-- ROSTER -->
+    <section class="roster-section section-wrap" id="roster">
+      <div class="roster-heading">
+        <div class="section-heading">
+          <p class="eyebrow">
+            <span class="section-index">02</span>
+            <span data-i18n="rosterEyebrow">DAFTAR PEMAIN</span>
+          </p>
+
+          <h2 data-i18n="rosterTitle">
+            Meet the <span class="accent">roster.</span>
+          </h2>
+        </div>
+
+        <p class="roster-intro" data-i18n="rosterIntro">
+          Kenali para pemain yang menjadi bagian dari
+          Tekken Medan Alliance.
+        </p>
+      </div>
+
+
+      <div class="roster-toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="playerSearch" type="search" data-i18n-placeholder="searchPlaceholder"
+            placeholder="Cari nickname, rank, karakter, atau quotes..." autocomplete="off">
+        </label>
+
+        <label class="sort-box">
+          <span data-i18n="sortLabel">Urutkan:</span>
+          <select id="playerSort" aria-label="Urutkan roster">
+            <option value="rank-desc" data-i18n="sortRankHigh">
+              Rank tertinggi
+            </option>
+            <option value="rank-asc" data-i18n="sortRankLow">
+              Rank terendah
+            </option>
+            <option value="name-asc" data-i18n="sortAZ">
+              Nickname A-Z
+            </option>
+            <option value="name-desc" data-i18n="sortZA">
+              Nickname Z-A
+            </option>
+          </select>
+        </label>
+
+        <span class="roster-count" id="rosterCount">0 PEMAIN</span>
+      </div>
+
+
+      <div class="table-shell">
+        <table class="roster-table">
+          <thead>
+
+            <tr>
+              <th data-i18n="thPlayer">NICKNAME</th>
+              <th data-i18n="thRank">HIGHEST RANK</th>
+              <th data-i18n="thMain">MAIN CHAR</th>
+              <th data-i18n="thQuotes">QUOTES</th>
+              <th data-i18n="thEwgf">EWGF PROFILE</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="rosterBody">
+            <!-- Data pemain diisi otomatis melalui script.js -->
+          </tbody>
+        </table>
+
+        <div class="empty-state" id="emptyState">
+          <span class="empty-icon">＋</span>
+          <h3 data-i18n="emptyTitle">Roster segera hadir.</h3>
+          <p data-i18n="emptyText">
+            Data pemain belum ditambahkan. Daftarkan pemain
+            komunitas di file script.js.
+          </p>
+        </div>
+      </div>
+
+      <p class="table-footnote" data-i18n="tableFootnote">
+        Data roster dapat diperbarui oleh pengelola website.
+      </p>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="join-banner section-wrap">
+      <div>
+        <p class="eyebrow" data-i18n="joinEyebrow">
+          TEKKEN MEDAN ALLIANCE
+        </p>
+
+        <h2 data-i18n="joinTitle">See you in the arena.</h2>
+      </div>
+
+      <p data-i18n="joinText">
+        Terus bermain, terus berkembang, dan dukung komunitas lokal.
+      </p>
+
+      <a class="join-mark" href="#home" aria-label="Back to top">
+        TMA <span>↑</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">
+      TMA<span class="accent">.</span>
+    </a>
+
+    <p data-i18n="footerText">
+      Komunitas Tekken Medan, Sumatera Utara, Indonesia.
+    </p>
+
+    <span>
+      © <span id="currentYear"></span> TEKKEN MEDAN ALLIANCE
+    </span>
+  </footer>
+</body>
+
+</html>
