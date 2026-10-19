@@ -29,6 +29,9 @@
       <a href="#home" data-i18n="navHome">Beranda</a>
       <a href="#about" data-i18n="navAbout">Tentang</a>
       <a href="#roster" data-i18n="navRoster">Pemain</a>
+      <a href="#activity" data-i18n="navActivity">
+        Aktivitas
+      </a>
       <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">EN</button>
     </nav>
   </header>
@@ -116,7 +119,34 @@
         </p>
       </div>
     </section>
+    <!-- RECENT ACTIVITY -->
+    <section class="activity-section section-wrap" id="activity">
+      <div class="activity-heading">
+        <div class="section-heading">
+          <p class="eyebrow">
+            <span class="section-index">03</span>
+            <span data-i18n="activityEyebrow">RIWAYAT KOMPETITIF</span>
+          </p>
 
+          <h2 data-i18n="activityTitle">
+            Recent <span class="accent">activity.</span>
+          </h2>
+        </div>
+
+        <p class="activity-intro" data-i18n="activityIntro">
+          Turnamen yang berlokasi di Medan, Sumatera Utara.
+        </p>
+      </div>
+
+      <div class="activity-list" id="recentActivityList">
+        <!-- Kartu diisi otomatis oleh script.js -->
+      </div>
+
+      <a class="button button-primary activity-all" href="activity.html">
+        <span data-i18n="activityViewAll">LIHAT SEMUA AKTIVITAS</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
     <!-- ROSTER -->
     <section class="roster-section section-wrap" id="roster">
       <div class="roster-heading">
@@ -201,6 +231,12 @@
       </p>
     </section>
 
+    <!-- new sec -->
+
+
+
+
+
     <!-- CLOSING -->
     <section class="join-banner section-wrap">
       <div>
@@ -221,6 +257,7 @@
     </section>
   </main>
 
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <a class="footer-brand" href="#home">
@@ -234,7 +271,13 @@
     <span>
       © <span id="currentYear"></span> TEKKEN MEDAN ALLIANCE
     </span>
+
+    <div class="footer-credit">
+      <span data-i18n="footerMadeBy">Website created by</span>
+      <strong>DG<span>x</span></strong>
+    </div>
   </footer>
+
 </body>
 
 </html>

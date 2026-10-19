@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Riwayat turnamen Tekken Medan Alliance.">
+    <title>Recent Activities — Tekken Medan Alliance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="top-line"></div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html#home">
+            <img class="brand-logo" src="assets/LOGO.jpeg" alt="Tekken Medan Alliance Logo">
+            <span class="brand-copy">
+                <strong>TEKKEN MEDAN</strong>
+                <small>ALLIANCE</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+        <nav class="nav" id="mainNav">
+            <a href="index.html#home" data-i18n="navHome">Beranda</a>
+            <a href="index.html#about" data-i18n="navAbout">Tentang</a>
+            <a href="index.html#activity" data-i18n="navActivity">Aktivitas</a>
+            <a href="index.html#roster" data-i18n="navRoster">Pemain</a>
+            <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="activity-page section-wrap">
+            <div class="activity-page-heading">
+                <p class="eyebrow">
+                    <span class="section-index">03</span>
+                    <span data-i18n="activityEyebrow">RIWAYAT KOMPETITIF</span>
+                </p>
+
+                <h1 data-i18n="activityPageTitle">
+                    All <span class="accent">activities.</span>
+                </h1>
+
+                <p class="activity-intro" data-i18n="activityPageIntro">
+                    Seluruh riwayat turnamen Tekken Medan Alliance,
+                    diurutkan dari tanggal terbaru.
+                </p>
+            </div>
+
+            <div class="activity-list" id="allActivityList"></div>
+
+            <a class="button button-primary activity-all" href="index.html#activity">
+                <span data-i18n="activityBack">KEMBALI KE BERANDA</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-brand" href="index.html#home">
+            TMA<span class="accent">.</span>
+        </a>
+
+        <p data-i18n="footerText">
+            Komunitas Tekken Medan, Sumatera Utara, Indonesia.
+        </p>
+
+        <span>
+            © <span id="currentYear"></span> TEKKEN MEDAN ALLIANCE
+        </span>
+
+        <div class="footer-credit">
+            <span data-i18n="footerMadeBy">Website dibuat oleh</span>
+            <strong>DG<span>x</span></strong>
+        </div>
+    </footer>
+</body>
+
+</html>
