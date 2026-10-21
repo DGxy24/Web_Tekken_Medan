@@ -192,7 +192,7 @@ const PLAYERS = [
     rank: "God of Destruction",
     main: "Yoshimitsu",
     quotes: "",
-    ewgfProfile: ""
+    ewgfProfile: "https://www.ewgf.gg/player/65M7MHe2FBM6"
   },
   {
     nickname: "Helio",
@@ -207,7 +207,49 @@ const PLAYERS = [
     main: "Hwoarang",
     quotes: "Keep moving forward.",
     ewgfProfile: ""
-  }
+  },
+    {
+    nickname: "TMA | Apollyon",
+    rank: "God of Destruction II",
+    main: "Lars",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/5qa848BNbbyG"
+  },
+      {
+    nickname: "yoziex",
+    rank: "God of Destruction II",
+    main: "Bryan",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4rMYbHEBYahr"
+  },
+        {
+    nickname: "Nemui",
+    rank: "God of Destruction II",
+    main: "Claudio, Leroy",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4HjiYHebmen2"
+  },
+      {
+    nickname: "Rinvilz",
+    rank: "Tekken King",
+    main: "Alisa",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/2n4Lqg2LbFb8"
+  },
+        {
+    nickname: "AlanFu",
+    rank: "Tekken God",
+    main: "Dragunov",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/5JyLqa572TGT"
+  },
+          {
+    nickname: "Ririman",
+    rank: "God of Destruction IV",
+    main: "Reina",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/5DRQt2DNQYEG"
+  },
 ];
 
 
