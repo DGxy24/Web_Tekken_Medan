@@ -17,15 +17,16 @@
 
 const PLAYERS = [
   
+  
+
   {
     nickname: "DGx",
     rank: "God of Destruction VI",
     main: "King",
-    quotes: "Jangan biarkan apapun menganggu Tekken mu!",
-    ewgfProfile: "https://www.ewgf.gg/player/3qtdnHGhGJQQ" // ganti dengan link profil EWGF pemain
+    quotes: "Jangan biarkan apa pun mengganggu Tekken-mu!",
+    ewgfProfile: "https://www.ewgf.gg/player/3qtdnHGhGJQQ"
   },
-
-{
+  {
     nickname: "Dev",
     rank: "Tekken Emperor",
     main: "Kunimitsu",
@@ -50,7 +51,7 @@ const PLAYERS = [
     nickname: "Holybangsat",
     rank: "God of Destruction II",
     main: "Yoshimitsu",
-    quotes: "buang skripsi, main tekken",
+    quotes: "Buang skripsi, main Tekken.",
     ewgfProfile: ""
   },
   {
@@ -85,7 +86,7 @@ const PLAYERS = [
     nickname: "March",
     rank: "Tekken King",
     main: "Lili",
-    quotes: ".",
+    quotes: "",
     ewgfProfile: ""
   },
   {
@@ -99,10 +100,117 @@ const PLAYERS = [
     nickname: "Aerial",
     rank: "God of Destruction II",
     main: "Dragunov",
-    quotes: "its never over until is over",
+    quotes: "It's never over until it's over.",
     ewgfProfile: "https://ewgf.gg/player/4HA7r8eBHi8h"
+  },
+  {
+    nickname: "Ghara",
+    rank: "Non Ranked Player",
+    main: "Devil Jin, Kazuya, Fahkumram",
+    quotes: "Horas!",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "TMA | 夜誠",
+    rank: "Tekken God",
+    main: "Hwoarang",
+    quotes: "Hwoarang not gay",
+    ewgfProfile: "https://www.ewgf.gg/player/5BGFgDGY2gdM?tab=compare"
+  },
+  {
+    nickname: "J3STER",
+    rank: "Tekken King",
+    main: "Paul Phoenix, Eddy Gordo, Steve Fox",
+    quotes: "No pain, no gain.",
+    ewgfProfile: "https://ewgf.gg/player/3AmM6yfFj2TJ"
+  },
+  {
+    nickname: "tk_jwcr",
+    rank: "God of Destruction V",
+    main: "Dragunov",
+    quotes: "Jawa adalah kunci",
+    ewgfProfile: "https://ewgf.gg/player/4qm2fyLGE2a2"
+  },
+  {
+    nickname: "Wrath",
+    rank: "Tekken God Supreme",
+    main: "Jin",
+    quotes: "Jangan dibantai dong puh 🙏🏼",
+    ewgfProfile: "https://www.ewgf.gg/player/2HgJ9t5TA6td"
+  },
+  {
+    nickname: "Silverstar_",
+    rank: "Tekken King",
+    main: "Lili",
+    quotes: "Ga perlu combo keren-keren, yang penting menang.",
+    ewgfProfile: "https://ewgf.gg/player/4QmQfD4YABTj"
+  },
+  {
+    nickname: "Ronny_san",
+    rank: "Bushin",
+    main: "Lidia Sobieska",
+    quotes: "Let us make this a fight to be proud of.",
+    ewgfProfile: "https://www.ewgf.gg/player/68tJiEEDn5JM"
+  },
+  {
+    nickname: "gintaeee_",
+    rank: "Tekken God",
+    main: "Eddy, Hwoarang, Dragunov",
+    quotes: "",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "sunopan",
+    rank: "Non Ranked Player",
+    main: "Bears",
+    quotes: "We gotta talk, man. I want some of that marijuana that you guys are smoking there, at the Namco Police Department.",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Gladioz",
+    rank: "God of Destruction I",
+    main: "King, Armor King, Bryan",
+    quotes: "Some men die of thirst, while others drown.",
+    ewgfProfile: "https://ewgf.gg/player/3YDF6NMBQfdd"
+  },
+  {
+    nickname: "Fang",
+    rank: "Non Ranked Player",
+    main: "Alisa, Lars, Jack-8",
+    quotes: "",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "DoLaY",
+    rank: "God of Destruction",
+    main: "Geese Howard, Jun",
+    quotes: "No judol, yes Tekken 8.",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "LeungSiuFai",
+    rank: "God of Destruction",
+    main: "Yoshimitsu",
+    quotes: "",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Helio",
+    rank: "God of Destruction",
+    main: "Miary Zo",
+    quotes: "",
+    ewgfProfile: ""
+  },
+  {
+    nickname: "Senta",
+    rank: "Non Ranked Player",
+    main: "Hwoarang",
+    quotes: "Keep moving forward.",
+    ewgfProfile: ""
   }
 ];
+
+
 
 
 // untuk urutan rank
@@ -610,9 +718,177 @@ const ACTIVITIES = [
     location: "Main Atrium Plaza Millennium Jl. Kapten Muslim No.111",
     instagramUrl: "https://www.instagram.com/p/DWOA9eQEyqA/",
     bracketUrl: "https://challonge.com/T8Millenium"
-  }
+  },
+  {
+    name: "Delipark Komed 2024",
+    date: "2024-02-04",
+    location: "Delipark Medan Mall",
+    instagramUrl: "https://www.instagram.com/p/C22dp17J_D7/?exln=MWV1MmwwMzI1ZnNnaQ==",
+    bracketUrl: "https://challonge.com/yimv38zc"
+  },
+{
+  name: "Fun Tekken 8 Turnament by Komputer Medan Day 1",
+  date: "2024-02-28",
+  location: "Center Point Medan",
+  instagramUrl: "",
+  bracketUrl: "https://challonge.com/4oybirez"
+},
+{
+  name: "Fun Tekken 8 Turnament by Komputer Medan Day 2",
+  date: "2024-02-29",
+  location: "Center Point Medan",
+  instagramUrl: "",
+  bracketUrl: "https://challonge.com/hjilggg"
+},
+{
+  name: "Fun Tekken 8 Turnament by Komputer Medan Day 3",
+  date: "2024-03-01",
+  location: "Center Point Medan",
+  instagramUrl: "",
+  bracketUrl: "https://challonge.com/dt9rx0ri"
+},
+{
+  name: "Fun Tekken 8 Turnament by Komputer Medan Day 4",
+  date: "2024-03-02",
+  location: "Center Point Medan",
+  instagramUrl: "",
+  bracketUrl: "https://challonge.com/588wmoi4"
+},
+{
+  name: "Fun Tekken 8 Turnament by Komputer Medan Day 5",
+  date: "2024-03-03",
+  location: "Center Point Medan",
+  instagramUrl: "",
+  bracketUrl: "https://challonge.com/ohmfj53x"
+},
+{
+    name: "Komputer Medan Monthly Tekken 8 Tournament",
+    date: "2024-03-22",
+    location: "Komputer Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/ecfkl9hk"
+  },
 
+  {
+    name: "Komputer Medan Monthly Tekken 8 Tournament",
+    date: "2024-04-27",
+    location: "Komputer Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/o9x0nqx3"
+  },
+{
+    name: "Tournament Tekken 8 Komed X AOC 2024 Day 1",
+    date: "2024-05-24",
+    location: "Komputer Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/TEKKEN8KMXAOC"
+  },
+  {
+    name: "Tournament Tekken 8 Komed X AOC 2024 Day 2 (hasil pemenang di link instagram)",
+    date: "2024-05-25",
+    location: "Komputer Medan",
+    instagramUrl: "https://www.instagram.com/p/C7ZLGgjBeN6/?img_index=2",
+    bracketUrl: "https://challonge.com/TEKKEN8XAOCDAY2"
+  },
 
+  {
+    name: "TEKKEN MEDAN COMMUNITY TOURNAMENT (TMCT) SEASON 1 PRO LEAGUE",
+    date: "2024-06-16",
+    location: "LKKR, Jl. Candi Borobudur No. 14 A",
+    instagramUrl: "https://www.instagram.com/p/C7l3doAyUtv/",
+    bracketUrl: "https://challonge.com/TMCTS1_Pro"
+  },
+    {
+    name: "TEKKEN MEDAN COMMUNITY TOURNAMENT (TMCT) SEASON 1 ROOKIE LEAGUE",
+    date: "2024-06-16",
+    location: "LKKR, Jl. Candi Borobudur No. 14 A",
+    instagramUrl: "https://www.instagram.com/p/C7l3mskyRtg//",
+    bracketUrl: "https://challonge.com/TMCTS1_Rookie"
+  },
+
+{
+    name: "Tekken 8 Acer Predator 2024",
+    date: "2024-10-12",
+    location: "Mall Plaza Medan Fair",
+    instagramUrl: "https://www.instagram.com/p/DA0g4CiNu2e/",
+    bracketUrl: "https://challonge.com/medantekken8"
+  },
+
+  {
+    name: "TMCT SEASON 2",
+    date: "2024-12-1",
+    location: "KFC Adam Malik, JL. Adam Malik No 57, Medan",
+    instagramUrl: "https://www.instagram.com/p/DCi5n1TTkv8/",
+    bracketUrl: "https://challonge.com/TMCT_SEASON2"
+  },
+
+  {
+    name: "Tri Battle Arena Tekken 8 Tournament",
+    date: "2024-12-28",
+    location: "Manhattan Urban Market",
+    instagramUrl: "https://www.instagram.com/p/DDtJ4LHzpmo/?img_index=4",
+    bracketUrl: ""
+  },
+
+  {
+    name: "USU FEB Tekken 8 Competition",
+    date: "2025-05-07",
+    location: "Aula Prof. Dr. Suhadji Hadibroto, FEB USU",
+    instagramUrl: "https://www.instagram.com/p/DGzQmnpTEMd/",
+    bracketUrl: ""
+  },
+
+  {
+    name: " Komputer Medan Cemara Asri Grand Opening Tekken 8 Tournament",
+    date: "2025-04-18",
+    location: " Komputer Medan Komplek Cemara Asri. Jl. Boulevard Timur Blok Q5, No. 88 B-C, Pecut, Sei, Medan Estate, Silau Tua, Medan, Sumatera Utara",
+    instagramUrl: "https://www.instagram.com/p/DIa3GSCTT6v/?img_index=1",
+    bracketUrl: ""
+  },
+  {
+    name: " TMCT Season 3 Umum ",
+    date: "2025-06-08",
+    location: "Kampus IT&B, Jl. Mahoni No 16, Medan",
+    instagramUrl: "https://www.instagram.com/p/DJ3el7mTt2S/?img_index=1",
+    bracketUrl: "https://challonge.com/TMCTS3_ALL"
+  },
+    {
+    name: " TMCT Season 3 Amateur Rush ",
+    date: "2025-06-08",
+    location: "Kampus IT&B, Jl. Mahoni No 16, Medan",
+    instagramUrl: "https://www.instagram.com/p/DJ3el7mTt2S/?img_index=1",
+    bracketUrl: "https://challonge.com/TMCTS3_ARush"
+  },
+{
+    name: "Tekken 8 Acer Predator 2025",
+    date: "2025-10-19",
+    location: " Plaza Medan Fair, Medan",
+    instagramUrl: "https://www.instagram.com/p/DPyIl7bkjWC/?img_index=1",
+    bracketUrl: "https://challonge.com/id/xz0zcem7"
+  },
+
+  {
+    name: "ICAFE MEDAN CIKDIKTIRO TEKKEN 8 TOURNAMENT",
+    date: "2025-07-20",
+    location: "iCafeMedanCikditiro Jl. Teuku Cik Ditiro No.128, Madras Hulu, Kec. Medan Polonia, Kota Medan, Sumatera Utara 20152",
+    instagramUrl: "https://www.instagram.com/p/DLmnIqzT5GW/",
+    bracketUrl: "https://challonge.com/g0dibu9u"
+  },
+
+    {
+    name: "ICAFE MEDAN KARYA WISATA TEKKEN 8 TOURNAMENT",
+    date: "2025-09-28",
+    location: " ICAFE MEDAN KARYA WISATA JALAN KARYA WISATA NO. 78",
+    instagramUrl: "https://www.instagram.com/p/DOl1tOaEkD0/",
+    bracketUrl: "https://challonge.com/5ttjid0m"
+  },
+    {
+    name: "ICAFE MEDAN  TEKKEN 8 TOURNAMENT",
+    date: "2026-01-18",
+    location: " ICAFE MEDAN KARYA WISATA JALAN KARYA WISATA NO. 78",
+    instagramUrl: "https://www.instagram.com/p/DQRYECCExvz/",
+    bracketUrl: "https://challonge.com/erd8o91l"
+  },
 ];
 
 // {
