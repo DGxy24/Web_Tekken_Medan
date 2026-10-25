@@ -626,6 +626,23 @@ h1, h2, h3, p { margin-top: 0; }
   }
 }
 
+/* Join WhatsApp Community Button */
+.button-join {
+  background-color: #25D366;
+  color: #111111;
+  border: 1px solid #25D366;
+  text-decoration: none;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.button-join:hover {
+  background-color: #1EBE5D;
+  border-color: #1EBE5D;
+  transform: translateY(-2px);
+}
+
 
 /* Website creator credit */
 .footer-credit {
@@ -650,4 +667,680 @@ h1, h2, h3, p { margin-top: 0; }
 
 .footer-credit strong span {
   color: var(--red);
+}
+
+/* HERO ACTIONS */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+/* Ukuran dan alignment tombol */
+.hero-actions .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-btn-icon {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+/* Tombol roster */
+.hero-actions .button-primary {
+  box-shadow: 0 4px 14px rgba(227, 41, 54, 0.12);
+}
+
+.hero-actions .button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 41, 54, 0.25);
+}
+
+.hero-actions .button-primary:hover .hero-btn-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Tombol kenali komunitas */
+.hero-actions .hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 8px;
+  color: #d0d0d0;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-actions .hero-secondary:hover {
+  color: #ffffff;
+}
+
+.hero-actions .hero-secondary span:last-child {
+  transition: transform 0.2s ease;
+}
+
+.hero-actions .hero-secondary:hover span:last-child {
+  transform: translateY(3px);
+}
+
+/* Tombol Join us */
+.hero-actions .button-join {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #102718;
+  border: 1px solid #25D366;
+  border-radius: 6px;
+}
+
+.hero-actions .button-join:hover {
+  background: #1fbd5b;
+  border-color: #1fbd5b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.18);
+}
+
+.join-icon {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.hero-actions .button-join:hover .join-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Keyboard accessibility */
+.hero-actions a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Responsive HP */
+@media (max-width: 600px) {
+  .hero-actions {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .hero-actions .hero-btn {
+    min-height: 46px;
+    padding: 0 15px;
+    gap: 10px;
+  }
+
+  .hero-actions .hero-secondary {
+    padding: 0 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-actions *,
+  .hero-actions *::before,
+  .hero-actions *::after {
+    transition: none !important;
+  }
+}
+
+
+
+/* PANEL TOMBOL HERO */
+.hero-actions-panel {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 35, 0.96),
+    rgba(17, 17, 17, 0.98)
+  );
+  border: 1px solid #383838;
+  border-left: 3px solid #e32936;
+  border-radius: 8px;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Aksen kecil di sudut panel */
+.hero-actions-panel::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 18px;
+  width: 52px;
+  height: 2px;
+  background: #e32936;
+}
+
+/* Susunan tombol */
+.hero-actions-panel .hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* Ukuran tombol seragam */
+.hero-actions-panel .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Tombol merah */
+.hero-actions-panel .button-primary {
+  box-shadow: 0 3px 12px rgba(227, 41, 54, 0.12);
+}
+
+.hero-actions-panel .button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(227, 41, 54, 0.22);
+}
+
+/* Tombol tengah */
+.hero-actions-panel .hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 14px;
+  color: #d0d0d0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-actions-panel .hero-secondary:hover {
+  color: #ffffff;
+}
+
+/* Tombol WhatsApp */
+.hero-actions-panel .button-join {
+  background: #25D366;
+  color: #102718;
+  border: 1px solid #25D366;
+}
+
+.hero-actions-panel .button-join:hover {
+  background: #1fbd5b;
+  border-color: #1fbd5b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(37, 211, 102, 0.15);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .hero-actions-panel {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 24px;
+  }
+
+  .hero-actions-panel .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-actions-panel .hero-btn {
+    padding: 0 12px;
+    min-height: 44px;
+  }
+
+  .hero-actions-panel .hero-secondary {
+    padding: 0 8px;
+  }
+}
+
+/* VIEW ALL ACTIVITIES */
+.activity-all {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 48px;
+  padding: 0 18px;
+  margin-top: 24px;
+
+  background: linear-gradient(135deg, #d92332, #a91420);
+  color: #ffffff;
+  border: 1px solid #ed3543;
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+
+  box-shadow: 0 4px 14px rgba(227, 41, 54, 0.12);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Aksen garis di sisi bawah */
+.activity-all::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 32%;
+  height: 2px;
+  background: #ff4654;
+  transition: width 0.25s ease;
+}
+
+/* Ikon panah */
+.activity-all .activity-all-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Hover */
+.activity-all:hover {
+  background: linear-gradient(135deg, #ed293b, #c71929);
+  border-color: #ff4654;
+  box-shadow: 0 7px 22px rgba(227, 41, 54, 0.24);
+  transform: translateY(-2px);
+}
+
+.activity-all:hover::after {
+  width: 100%;
+}
+
+.activity-all:hover .activity-all-icon {
+  transform: translate(3px, -3px);
+}
+
+/* Fokus keyboard */
+.activity-all:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .activity-all {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* =====================================
+   TEKKEN MEDAN ALLIANCE - PLAYER ROSTER
+===================================== */
+
+.table-shell {
+  overflow-x: auto;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  background: #121212;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* Tabel utama */
+.roster-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+/* Header */
+.roster-table thead {
+  background: #202020;
+}
+
+.roster-table th {
+  padding: 17px 18px;
+  color: #a8a8a8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  white-space: nowrap;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+/* Aksen merah pada header */
+.roster-table th:first-child {
+  border-top: 2px solid #e32936;
+}
+
+/* Sel tabel */
+.roster-table td {
+  padding: 17px 18px;
+  color: #d0d0d0;
+  font-size: 13px;
+  line-height: 1.6;
+  border-bottom: 1px solid #262626;
+  transition: background-color 0.2s ease;
+}
+
+/* Warna baris selang-seling */
+.roster-table tbody tr:nth-child(even) {
+  background: #171717;
+}
+
+.roster-table tbody tr:nth-child(odd) {
+  background: #121212;
+}
+
+/* Hover pada baris */
+.roster-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.roster-table tbody tr:hover {
+  background: #242020;
+}
+
+.roster-table tbody tr:hover td:first-child {
+  box-shadow: inset 3px 0 0 #e32936;
+}
+
+/* Nickname */
+.roster-table td:first-child {
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Tautan EWGF Profile */
+.roster-table td a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff626d;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.roster-table td a:hover {
+  color: #ff9aa1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Quotes */
+.roster-table .quote-text {
+  color: #999999;
+  font-style: italic;
+}
+
+/* Baris terakhir */
+.roster-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Penghitung jumlah pemain */
+.roster-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  border: 1px solid #383838;
+  border-radius: 5px;
+  background: #1a1a1a;
+  color: #d5d5d5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* Status ketika hasil pencarian kosong */
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999999;
+}
+
+.empty-state h3 {
+  margin-bottom: 8px;
+  color: #eeeeee;
+}
+
+.empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  border: 1px solid #493034;
+  border-radius: 50%;
+  color: #ff626d;
+  background: #211619;
+  font-size: 23px;
+}
+
+/* Catatan di bawah tabel */
+.table-footnote {
+  margin-top: 12px;
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Scrollbar horizontal */
+.table-shell::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-shell::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+.table-shell::-webkit-scrollbar-thumb {
+  background: #454545;
+  border-radius: 10px;
+}
+
+.table-shell::-webkit-scrollbar-thumb:hover {
+  background: #e32936;
+}
+
+/* Tampilan perangkat kecil */
+@media (max-width: 768px) {
+  .roster-table {
+    min-width: 760px;
+  }
+
+  .roster-table th {
+    padding: 14px;
+    font-size: 10px;
+  }
+
+  .roster-table td {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  .table-shell {
+    border-radius: 6px;
+  }
+}
+
+
+
+/* Rank badge */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid #553037;
+  border-radius: 4px;
+  background: #29181b;
+  color: #ff9299;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+
+
+/* EWGF PROFILE BADGE */
+.roster-table .ewgf-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 10px;
+
+  background: linear-gradient(135deg, #30191d, #211416);
+  border: 1px solid #553037;
+  border-radius: 4px;
+
+  color: #ff9299;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.roster-table .ewgf-badge:hover {
+  background: #482027;
+  border-color: #e32936;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 41, 54, 0.12);
+}
+
+.roster-table .ewgf-arrow {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.roster-table .ewgf-badge:hover .ewgf-arrow {
+  transform: translate(2px, -2px);
+}
+
+.roster-table .ewgf-badge:focus-visible {
+  outline: 2px solid #ff9299;
+  outline-offset: 3px;
+}
+
+
+
+/* Ukuran teks tabel roster: 18px */
+.roster-table td {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Nickname pemain */
+.roster-table td:first-child {
+  font-size: 18px;
+}
+
+/* Badge rank */
+.roster-table .rank-badge {
+  font-size: 16px;
+  padding: 6px 10px;
+}
+
+/* Link EWGF Profile */
+.roster-table .ewgf-badge {
+  font-size: 16px;
+  padding: 7px 11px;
+}
+
+/* Quotes pemain */
+.roster-table .quote-text {
+  font-size: 18px;
+}
+
+/* Header tabel tetap lebih kecil */
+.roster-table th {
+  font-size: 11px;
+}
+
+
+/* Main Character — Esports Badge */
+.roster-table .character-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px !important;
+  font-weight: 700;
+  line-height: 1.4;
+
+  padding: 7px 12px;
+  margin: 2px 3px 2px 0;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #3a171c, #211416);
+  border: 1px solid #87313c;
+  border-left: 3px solid #e32936;
+  border-radius: 5px;
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+
+  box-shadow: 0 2px 6px rgba(227, 41, 54, 0.12);
+  transition: all 0.2s ease;
+}
+
+/* Efek hover */
+.roster-table .character-tag:hover {
+  color: #ffb4ba;
+  background: linear-gradient(135deg, #542027, #30171b);
+  border-color: #e32936;
+  box-shadow: 0 3px 10px rgba(227, 41, 54, 0.2);
+  transform: translateY(-1px);
 }

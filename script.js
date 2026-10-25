@@ -14,11 +14,50 @@
   }
 */
 
-
+// Data pemain
 const PLAYERS = [
-  
-  
-
+  {
+    nickname: "chicken",
+    rank: "God of Destruction II",
+    main: "Lidia",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4he88hmjEaaM"
+  },
+  {
+    nickname: "ImpossibleID",
+    rank: "God of Destruction I",
+    main: "Dragunov",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3AQ3h8GHiYJ8"
+  },
+  {
+    nickname: "23Dmntor",
+    rank: "God of Destruction V",
+    main: "Lars",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4qbh4B967JQT"
+  },
+  {
+    nickname: "Wesfore",
+    rank: "God of Destruction II",
+    main: "Asuka",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/4iMFAahYLGT2"
+  },
+  {
+    nickname: "Amaterasuu",
+    rank: "God of Destruction IV",
+    main: "Jin",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3HHTGnfR7MQf"
+  },
+  {
+    nickname: "ShunShu",
+    rank: "Raijin",
+    main: "Reina",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/46m7jjf5dban"
+  },
   {
     nickname: "DGx",
     rank: "God of Destruction VI",
@@ -208,48 +247,50 @@ const PLAYERS = [
     quotes: "Keep moving forward.",
     ewgfProfile: ""
   },
-    {
+  {
     nickname: "TMA | Apollyon",
     rank: "God of Destruction II",
     main: "Lars",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/5qa848BNbbyG"
   },
-      {
+  {
     nickname: "yoziex",
     rank: "God of Destruction II",
     main: "Bryan",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/4rMYbHEBYahr"
   },
-        {
+  {
     nickname: "Nemui",
     rank: "God of Destruction II",
     main: "Claudio, Leroy",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/4HjiYHebmen2"
   },
-      {
+  {
     nickname: "Rinvilz",
     rank: "Tekken King",
     main: "Alisa",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/2n4Lqg2LbFb8"
   },
-        {
+  {
     nickname: "AlanFu",
     rank: "Tekken God",
     main: "Dragunov",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/5JyLqa572TGT"
   },
-          {
+  {
     nickname: "Ririman",
     rank: "God of Destruction IV",
     main: "Reina",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/5DRQt2DNQYEG"
   },
+
+
 ];
 
 
@@ -360,7 +401,7 @@ const translations = {
     navActivity: "Aktivitas",
     activityTitle: 'Recent <span class="accent">activity.</span>',
     activityEyebrow: "RIWAYAT KOMPETITIF",
-    activityIntro: "Turnamen dan kompetisi Tekken Medan Alliance.",
+    activityIntro: "Turnamen dan kompetisi Tekken Di Medan, Sumatera Utara.",
     activityViewAll: "LIHAT SEMUA AKTIVITAS",
     activityPageTitle: 'Semua <span class="accent">aktivitas.</span>',
     activityPageIntro: "Seluruh riwayat turnamen, diurutkan dari tanggal terbaru.",
@@ -368,7 +409,7 @@ const translations = {
     footerMadeBy: "Website dibuat oleh",
     playerCount: (n) => `${n} PEMAIN`
   },
-//eng
+  //eng
   en: {
     navHome: "Home",
     navAbout: "About",
@@ -462,21 +503,21 @@ function applyLanguage(language) {
     }
   });
 
-const languageToggle = $("#languageToggle");
+  const languageToggle = $("#languageToggle");
 
-if (languageToggle) {
-  languageToggle.textContent = language === "id" ? "EN" : "ID";
+  if (languageToggle) {
+    languageToggle.textContent = language === "id" ? "EN" : "ID";
 
-  languageToggle.setAttribute(
-    "aria-label",
-    language === "id"
-      ? "Switch to English"
-      : "Ganti ke Bahasa Indonesia"
-  );
-}
+    languageToggle.setAttribute(
+      "aria-label",
+      language === "id"
+        ? "Switch to English"
+        : "Ganti ke Bahasa Indonesia"
+    );
+  }
 
-renderPlayers($("#playerSearch")?.value || "");
-renderAllActivityLists();
+  renderPlayers($("#playerSearch")?.value || "");
+  renderAllActivityLists();
 }
 
 function initials(name) {
@@ -585,17 +626,16 @@ function renderPlayers(searchTerm = "") {
             <span class="player-name">
               ${escapeHTML(player.nickname || "—")}
             </span>
-            ${
-              player.realName
-                ? `<span class="player-sub">${escapeHTML(player.realName)}</span>`
-                : ""
-            }
+            ${player.realName
+      ? `<span class="player-sub">${escapeHTML(player.realName)}</span>`
+      : ""
+    }
           </span>
         </div>
       </td>
 
       <td>
-        <span class="rank-text">
+        <span class="rank-badge">
           ${escapeHTML(player.rank || "—")}
         </span>
       </td>
@@ -612,19 +652,23 @@ function renderPlayers(searchTerm = "") {
         </span>
       </td>
 
-      <td>
-        ${
-          player.ewgfProfile &&
-          /^https?:\/\//i.test(player.ewgfProfile)
-            ? `<a
-                 class="ewgf-link"
-                 href="${escapeHTML(player.ewgfProfile)}"
-                 target="_blank"
-                 rel="noopener noreferrer"
-               >View Profile ↗</a>`
-            : '<span class="quote-empty">—</span>'
-        }
-      </td>
+      
+<td>
+  ${player.ewgfProfile &&
+      /^https?:\/\//i.test(player.ewgfProfile)
+      ? `<a
+           class="ewgf-badge"
+           href="${escapeHTML(player.ewgfProfile)}"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           <span>View Profile</span>
+           <span class="ewgf-arrow" aria-hidden="true">↗</span>
+         </a>`
+      : '<span class="quote-empty">—</span>'
+    }
+</td>
+
     </tr>
   `).join("");
 
@@ -648,10 +692,10 @@ function renderPlayers(searchTerm = "") {
     if (paragraph) {
       paragraph.textContent = hasSearch
         ? (
-            currentLanguage === "id"
-              ? "Coba kata kunci lain."
-              : "Try another search term."
-          )
+          currentLanguage === "id"
+            ? "Coba kata kunci lain."
+            : "Try another search term."
+        )
         : dictionary.emptyText;
     }
   } else {
@@ -747,7 +791,7 @@ const ACTIVITIES = [
     instagramUrl: "https://www.instagram.com/p/DXMXwZrk56n/?img_index=1",
     bracketUrl: "https://challonge.com/TMATS4"
   },
-    {
+  {
     name: "⭐ KomputerMedan X Colorful Tekken 8 Monthly Tournament ⭐",
     date: "2025-07-27",
     location: "Komputer Medan Komplek Cemara Asri. Jl. Boulevard Timur Blok Q5, No. 88 B-C, Pecut, Sei, Medan Estate, Silau Tua, Medan, Sumatera Utara",
@@ -768,42 +812,42 @@ const ACTIVITIES = [
     instagramUrl: "https://www.instagram.com/p/C22dp17J_D7/?exln=MWV1MmwwMzI1ZnNnaQ==",
     bracketUrl: "https://challonge.com/yimv38zc"
   },
-{
-  name: "Fun Tekken 8 Turnament by Komputer Medan Day 1",
-  date: "2024-02-28",
-  location: "Center Point Medan",
-  instagramUrl: "",
-  bracketUrl: "https://challonge.com/4oybirez"
-},
-{
-  name: "Fun Tekken 8 Turnament by Komputer Medan Day 2",
-  date: "2024-02-29",
-  location: "Center Point Medan",
-  instagramUrl: "",
-  bracketUrl: "https://challonge.com/hjilggg"
-},
-{
-  name: "Fun Tekken 8 Turnament by Komputer Medan Day 3",
-  date: "2024-03-01",
-  location: "Center Point Medan",
-  instagramUrl: "",
-  bracketUrl: "https://challonge.com/dt9rx0ri"
-},
-{
-  name: "Fun Tekken 8 Turnament by Komputer Medan Day 4",
-  date: "2024-03-02",
-  location: "Center Point Medan",
-  instagramUrl: "",
-  bracketUrl: "https://challonge.com/588wmoi4"
-},
-{
-  name: "Fun Tekken 8 Turnament by Komputer Medan Day 5",
-  date: "2024-03-03",
-  location: "Center Point Medan",
-  instagramUrl: "",
-  bracketUrl: "https://challonge.com/ohmfj53x"
-},
-{
+  {
+    name: "Fun Tekken 8 Turnament by Komputer Medan Day 1",
+    date: "2024-02-28",
+    location: "Center Point Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/4oybirez"
+  },
+  {
+    name: "Fun Tekken 8 Turnament by Komputer Medan Day 2",
+    date: "2024-02-29",
+    location: "Center Point Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/hjilggg"
+  },
+  {
+    name: "Fun Tekken 8 Turnament by Komputer Medan Day 3",
+    date: "2024-03-01",
+    location: "Center Point Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/dt9rx0ri"
+  },
+  {
+    name: "Fun Tekken 8 Turnament by Komputer Medan Day 4",
+    date: "2024-03-02",
+    location: "Center Point Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/588wmoi4"
+  },
+  {
+    name: "Fun Tekken 8 Turnament by Komputer Medan Day 5",
+    date: "2024-03-03",
+    location: "Center Point Medan",
+    instagramUrl: "",
+    bracketUrl: "https://challonge.com/ohmfj53x"
+  },
+  {
     name: "Komputer Medan Monthly Tekken 8 Tournament",
     date: "2024-03-22",
     location: "Komputer Medan",
@@ -818,7 +862,7 @@ const ACTIVITIES = [
     instagramUrl: "",
     bracketUrl: "https://challonge.com/o9x0nqx3"
   },
-{
+  {
     name: "Tournament Tekken 8 Komed X AOC 2024 Day 1",
     date: "2024-05-24",
     location: "Komputer Medan",
@@ -840,7 +884,7 @@ const ACTIVITIES = [
     instagramUrl: "https://www.instagram.com/p/C7l3doAyUtv/",
     bracketUrl: "https://challonge.com/TMCTS1_Pro"
   },
-    {
+  {
     name: "TEKKEN MEDAN COMMUNITY TOURNAMENT (TMCT) SEASON 1 ROOKIE LEAGUE",
     date: "2024-06-16",
     location: "LKKR, Jl. Candi Borobudur No. 14 A",
@@ -848,7 +892,7 @@ const ACTIVITIES = [
     bracketUrl: "https://challonge.com/TMCTS1_Rookie"
   },
 
-{
+  {
     name: "Tekken 8 Acer Predator 2024",
     date: "2024-10-12",
     location: "Mall Plaza Medan Fair",
@@ -894,14 +938,14 @@ const ACTIVITIES = [
     instagramUrl: "https://www.instagram.com/p/DJ3el7mTt2S/?img_index=1",
     bracketUrl: "https://challonge.com/TMCTS3_ALL"
   },
-    {
+  {
     name: " TMCT Season 3 Amateur Rush ",
     date: "2025-06-08",
     location: "Kampus IT&B, Jl. Mahoni No 16, Medan",
     instagramUrl: "https://www.instagram.com/p/DJ3el7mTt2S/?img_index=1",
     bracketUrl: "https://challonge.com/TMCTS3_ARush"
   },
-{
+  {
     name: "Tekken 8 Acer Predator 2025",
     date: "2025-10-19",
     location: " Plaza Medan Fair, Medan",
@@ -917,20 +961,27 @@ const ACTIVITIES = [
     bracketUrl: "https://challonge.com/g0dibu9u"
   },
 
-    {
+  {
     name: "ICAFE MEDAN KARYA WISATA TEKKEN 8 TOURNAMENT",
     date: "2025-09-28",
     location: " ICAFE MEDAN KARYA WISATA JALAN KARYA WISATA NO. 78",
     instagramUrl: "https://www.instagram.com/p/DOl1tOaEkD0/",
     bracketUrl: "https://challonge.com/5ttjid0m"
   },
-    {
+  {
     name: "ICAFE MEDAN  TEKKEN 8 TOURNAMENT",
     date: "2026-01-18",
     location: " ICAFE MEDAN KARYA WISATA JALAN KARYA WISATA NO. 78",
     instagramUrl: "https://www.instagram.com/p/DQRYECCExvz/",
     bracketUrl: "https://challonge.com/erd8o91l"
   },
+  {
+    name: "Aotake Matsuri USU Tekken  Tournaments 2026",
+    date: "2026-10-23",
+    location: "FIB USU",
+    instagramUrl: "https://www.instagram.com/p/Dc59cUfj7ay/?img_index=1",
+    bracketUrl: "https://challonge.com/id/flaa572b"
+  }
 ];
 
 // {
@@ -1096,18 +1147,18 @@ function renderActivities(containerId, limit = Infinity) {
 
         <div class="activity-actions">
           ${createAction(
-            item.instagramUrl,
-            "instagram",
-            labels.instagram,
-            "instagram"
-          )}
+      item.instagramUrl,
+      "instagram",
+      labels.instagram,
+      "instagram"
+    )}
 
           ${createAction(
-            item.bracketUrl,
-            "bracket",
-            labels.bracket,
-            "external"
-          )}
+      item.bracketUrl,
+      "bracket",
+      labels.bracket,
+      "external"
+    )}
         </div>
 
         ${note}
