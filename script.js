@@ -17,6 +17,27 @@
 // Data pemain
 const PLAYERS = [
   {
+    nickname: "Rex Turu",
+    rank: "God of Destruction VI",
+    main: "Lee",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/22gdQrY5Mi7T"
+  },  
+  {
+    nickname: "AMB | VEYNX",
+    rank: "God of Destruction",
+    main: "Jin, Kazuya, DVJ. Mishima Speciality",
+    quotes: "jangan takut cobain mishima, seru kok",
+    ewgfProfile: "https://www.ewgf.gg/player/2Bg9Q9aQR8mE"
+  },
+  {
+    nickname: "Umemura_Hikari",
+    rank: "God of Destruction IV",
+    main: "Azucena",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/2Bg9Q9aQR8mE"
+  },
+  {
     nickname: "chicken",
     rank: "God of Destruction II",
     main: "Lidia",
