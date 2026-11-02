@@ -243,7 +243,7 @@ const PLAYERS = [
   {
     nickname: "J3STER",
     rank: "Tekken King",
-    main: "Paul Phoenix, Eddy Gordo, Steve Fox",
+    main: "Paul, Eddy , Steve",
     quotes: "No pain, no gain.",
     ewgfProfile: "https://ewgf.gg/player/3AmM6yfFj2TJ"
   },
@@ -271,7 +271,7 @@ const PLAYERS = [
   {
     nickname: "Ronny_san",
     rank: "Bushin",
-    main: "Lidia Sobieska",
+    main: "Lidia",
     quotes: "Let us make this a fight to be proud of.",
     ewgfProfile: "https://www.ewgf.gg/player/68tJiEEDn5JM"
   },
@@ -285,7 +285,7 @@ const PLAYERS = [
   {
     nickname: "sunopan",
     rank: "Non Ranked Player",
-    main: "Bears",
+    main: "Kuma,Panda",
     quotes: "We gotta talk, man. I want some of that marijuana that you guys are smoking there, at the Namco Police Department.",
     ewgfProfile: "https://www.ewgf.gg/player/3G9jdf88jaM2"
   },
@@ -663,6 +663,35 @@ function getRankImage(rank) {
 }
 
 
+// gambar char main
+function getCharacterImages(main) {
+    if (!main) return "—";
+
+    const characters = main.split(",").map(char => char.trim());
+
+    return `
+        <div class="character-image-wrapper">
+            ${characters.map(character => {
+                const filename = character
+                    .toLowerCase()
+                    .replace(/\s+/g, "");
+
+                return `
+                    <img
+                        class="character-image"
+                        src="assets/char/${filename}.png"
+                        alt="${escapeHTML(character)}"
+                        title="${escapeHTML(character)}"
+                        onerror="this.style.display='none'"
+                    >
+                `;
+            }).join("")}
+        </div>
+    `;
+}
+
+
+
 
 function renderPlayers(searchTerm = "") {
   const tbody = $("#rosterBody");
@@ -772,11 +801,9 @@ function renderPlayers(searchTerm = "") {
 </td>
 
 
-      <td>
-        <span class="character-tag">
-          ${escapeHTML(player.main || "—")}
-        </span>
-      </td>
+    <td>
+    ${getCharacterImages(player.main)}
+</td>
 
       <td>
         <span class="quote-text">
