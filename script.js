@@ -52,13 +52,6 @@ const PLAYERS = [
     ewgfProfile: "https://www.ewgf.gg/player/2y6tfg75Q4HM"
   }, 
     {
-    nickname: "Gladioz",
-    rank: "God of Destruction I",
-    main: "King",
-    quotes: "",
-    ewgfProfile: "https://www.ewgf.gg/player/3YDF6NMBQfdd"
-  }, 
-      {
     nickname: "Agathon_BgGaton",
     rank: "Tekken King",
     main: "Raven",
