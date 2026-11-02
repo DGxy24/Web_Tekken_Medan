@@ -1344,3 +1344,19 @@ h1, h2, h3, p { margin-top: 0; }
   box-shadow: 0 3px 10px rgba(227, 41, 54, 0.2);
   transform: translateY(-1px);
 }
+
+
+
+.rank-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+}
+
+.rank-image {
+    width: 130px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}

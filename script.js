@@ -16,6 +16,69 @@
 
 // Data pemain
 const PLAYERS = [
+      {
+    nickname: "MusangNakal",
+    rank: "God of Destruction",
+    main: "Nina",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3Qg82JdHN2jJ"
+  },
+      {
+    nickname: "Zeronial",
+    rank: "Tekken King",
+    main: "Raven",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/5Ea2j9ghbnG6"
+  },
+      {
+    nickname: "TMC | wol_kylus",
+    rank: "God of Destruction II",
+    main: "Kazuya",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/56EgnhfqLQ28"
+  }, 
+    {
+    nickname: "kyy_joji",
+    rank: "Non ranked player",
+    main: "Law",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3fFDFbFi9A2f"
+  }, 
+    {
+    nickname: "HARIS GANTENG",
+    rank: "Tekken God",
+    main: "Zafina",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/2y6tfg75Q4HM"
+  }, 
+    {
+    nickname: "Gladioz",
+    rank: "God of Destruction I",
+    main: "King",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3YDF6NMBQfdd"
+  }, 
+      {
+    nickname: "Agathon_BgGaton",
+    rank: "Tekken King",
+    main: "Raven",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/2288jirBdB28"
+  }, 
+    {
+    nickname: "Ipann",
+    rank: "Tekken Emperor",
+    main: "Law",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/5t4RRh3dMMjM"
+  }, 
+    {
+    nickname: "Nyoti",
+    rank: "God of Destruction i",
+    main: "Law",
+    quotes: "nyot",
+    ewgfProfile: "https://www.ewgf.gg/player/4hNNL8j564fM"
+  }, 
   {
     nickname: "Rex Turu",
     rank: "God of Destruction VI",
@@ -217,14 +280,14 @@ const PLAYERS = [
     rank: "Tekken God",
     main: "Eddy, Hwoarang, Dragunov",
     quotes: "",
-    ewgfProfile: ""
+    ewgfProfile: "https://www.ewgf.gg/player/2BM6jfR83eaf"
   },
   {
     nickname: "sunopan",
     rank: "Non Ranked Player",
     main: "Bears",
     quotes: "We gotta talk, man. I want some of that marijuana that you guys are smoking there, at the Namco Police Department.",
-    ewgfProfile: ""
+    ewgfProfile: "https://www.ewgf.gg/player/3G9jdf88jaM2"
   },
   {
     nickname: "Gladioz",
@@ -566,6 +629,40 @@ function escapeHTML(value) {
 // }
 
 
+function getRankImage(rank) {
+    const normalizedRank = String(rank || "").trim().toLowerCase();
+
+    // Logo khusus Non Ranked Player
+    if (normalizedRank === "non ranked player") {
+        return "assets/rank/nrp.png";
+    }
+
+    // God of Destruction
+    if (normalizedRank.startsWith("god of destruction")) {
+        const level = normalizedRank.match(/\b([ivx]+)\s*$/i);
+
+        const godLevels = {
+            I: "1",
+            II: "2",
+            III: "3",
+            IV: "4",
+            V: "5",
+            VI: "6",
+            VII: "7"
+        };
+
+        const suffix = level ? godLevels[level[1].toUpperCase()] : "";
+
+        return `assets/rank/god${suffix}.png`;
+    }
+
+    // Rank lainnya
+    const filename = normalizedRank.replace(/\s+/g, "");
+
+    return `assets/rank/${filename}.png`;
+}
+
+
 
 function renderPlayers(searchTerm = "") {
   const tbody = $("#rosterBody");
@@ -655,11 +752,25 @@ function renderPlayers(searchTerm = "") {
         </div>
       </td>
 
+      
       <td>
-        <span class="rank-badge">
-          ${escapeHTML(player.rank || "—")}
-        </span>
-      </td>
+    ${
+        player.rank?.toLowerCase() === "non ranked player"
+            ? `<span class="rank-badge">Non Ranked Players</span>`
+            : `
+                <div class="rank-image-wrapper">
+                    <img
+                        class="rank-image"
+                        src="${getRankImage(player.rank)}"
+                        alt="${escapeHTML(player.rank || "Unknown Rank")}"
+                        title="${escapeHTML(player.rank || "Unknown Rank")}"
+                        onerror="this.style.display='none'"
+                    >
+                </div>
+            `
+    }
+</td>
+
 
       <td>
         <span class="character-tag">
@@ -1197,6 +1308,8 @@ function renderAllActivityLists() {
   // Halaman aktivitas: tampilkan seluruh turnamen.
   renderActivities("allActivityList");
 }
+
+
 renderPlayers();
 // Render aktivitas saat halaman dibuka.
 renderAllActivityLists();
