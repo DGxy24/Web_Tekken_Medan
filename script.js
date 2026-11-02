@@ -292,7 +292,7 @@ const PLAYERS = [
   {
     nickname: "Fang",
     rank: "Non Ranked Player",
-    main: "Alisa, Lars, Jack-8",
+    main: "Alisa, Lars, Jack8",
     quotes: "",
     ewgfProfile: ""
   },
