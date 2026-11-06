@@ -82,7 +82,7 @@ const PLAYERS = [
   {
     nickname: "AMB | VEYNX",
     rank: "God of Destruction",
-    main: "Jin, Kazuya, DVJ. Mishima Speciality",
+    main: "Jin, Kazuya, Devil jin",
     quotes: "jangan takut cobain mishima, seru kok",
     ewgfProfile: "https://www.ewgf.gg/player/2Bg9Q9aQR8mE"
   },
@@ -366,7 +366,13 @@ const PLAYERS = [
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/5DRQt2DNQYEG"
   },
-
+ {
+    nickname: "Arzen",
+    rank: "Fujin",
+    main: "Bryan, Paul",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/33Tqh526t2N4"
+  },
 
 ];
 

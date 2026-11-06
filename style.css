@@ -1384,3 +1384,36 @@ h1, h2, h3, p { margin-top: 0; }
 .character-image:hover {
     transform: scale(1.15);
 }
+
+.join-icon {
+    font-size: 22px;
+    color: #060606;
+    display: inline-block;
+}
+
+/* Instagram Button */
+.button-instagram {
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    ) !important;
+
+    color: #ffffff !important;
+    border: none;
+}
+
+.instagram-icon {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 22px;
+    color: #ffffff !important;
+}
+
+.button-instagram:hover {
+    filter: brightness(1.1);
+}
