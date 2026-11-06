@@ -1417,3 +1417,146 @@ h1, h2, h3, p { margin-top: 0; }
 .button-instagram:hover {
     filter: brightness(1.1);
 }
+
+
+
+/* =====================================
+   MOBILE ROSTER - PLAYER CARD LAYOUT
+===================================== */
+
+@media (max-width: 640px) {
+
+    /* Hilangkan horizontal scrolling */
+    .table-shell {
+        overflow-x: visible !important;
+        border: none;
+        background: transparent;
+    }
+
+    .roster-table {
+        display: block;
+        width: 100%;
+        min-width: 0 !important;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    /* Sembunyikan header tabel */
+    .roster-table thead {
+        display: none;
+    }
+
+    .roster-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+    }
+
+    /* Setiap pemain menjadi kartu */
+    .roster-table tbody tr {
+        display: block;
+        width: 100%;
+        padding: 12px 14px;
+        background: #181818;
+        border: 1px solid #333;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    /* Setiap informasi pemain */
+    .roster-table tbody td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+        padding: 10px 0;
+        border: none;
+        border-bottom: 1px solid #303030;
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    /* Label informasi */
+    .roster-table tbody td::before {
+        content: attr(data-label);
+        flex: 0 0 100px;
+        color: #999;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    /* Nickname */
+    .roster-table tbody td:first-child {
+        padding-top: 4px;
+        padding-bottom: 12px;
+    }
+
+    .player-cell {
+        justify-content: flex-end;
+        min-width: 0;
+        text-align: right;
+    }
+
+    .player-name {
+        overflow-wrap: anywhere;
+    }
+
+    /* Rank */
+    .rank-image-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .rank-image {
+        max-width: 125px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Main character */
+    .character-image-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .character-image {
+        max-width: 48px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Quotes */
+    .roster-table tbody td:nth-child(4) {
+        align-items: flex-start;
+    }
+
+    .quote-text {
+        max-width: 65%;
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* EWGF */
+    .roster-table tbody td:last-child {
+        border-bottom: none;
+        padding-bottom: 4px;
+    }
+
+    .ewgf-badge {
+        font-size: 11px;
+    }
+
+    .rank-badge {
+        font-size: 11px;
+    }
+}

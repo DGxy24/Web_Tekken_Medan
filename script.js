@@ -301,7 +301,7 @@ const PLAYERS = [
     rank: "God of Destruction",
     main: "Geese Howard, Jun",
     quotes: "No judol, yes Tekken 8.",
-    ewgfProfile: ""
+    ewgfProfile: "https://www.ewgf.gg/player/5YLt48mHFaGE"
   },
   {
     nickname: "LeungSiuFai",
@@ -763,7 +763,7 @@ function renderPlayers(searchTerm = "") {
 
   tbody.innerHTML = sortedPlayers.map((player) => `
     <tr>
-      <td>
+      <td data-label="${dictionary.thPlayer}">
         <div class="player-cell">
           <span class="player-avatar" aria-hidden="true">
             ${escapeHTML(initials(player.nickname))}
@@ -781,7 +781,7 @@ function renderPlayers(searchTerm = "") {
       </td>
 
       
-      <td>
+      <td data-label="${dictionary.thRank}">
     ${
         player.rank?.toLowerCase() === "non ranked player"
             ? `<span class="rank-badge">Non Ranked Players</span>`
@@ -800,18 +800,18 @@ function renderPlayers(searchTerm = "") {
 </td>
 
 
-    <td>
+    <td data-label="${dictionary.thMain}"> 
     ${getCharacterImages(player.main)}
 </td>
 
-      <td>
+      <td data-label="${dictionary.thQuotes}">
         <span class="quote-text">
           ${escapeHTML(player.quotes || "—")}
         </span>
       </td>
 
       
-<td>
+<td <td data-label="${dictionary.thEwgf}">
   ${player.ewgfProfile &&
       /^https?:\/\//i.test(player.ewgfProfile)
       ? `<a
