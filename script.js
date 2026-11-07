@@ -69,7 +69,7 @@ const PLAYERS = [
     nickname: "Nyoti",
     rank: "God of Destruction i",
     main: "Law",
-    quotes: "nyot",
+    quotes: "Lu mau gwa kenyot?!",
     ewgfProfile: "https://www.ewgf.gg/player/4hNNL8j564fM"
   }, 
   {
@@ -372,6 +372,29 @@ const PLAYERS = [
     main: "Bryan, Paul",
     quotes: "",
     ewgfProfile: "https://www.ewgf.gg/player/33Tqh526t2N4"
+  },
+   {
+    nickname: "YOLO4EVER",
+    rank: "Tekken god supreme",
+    main: "Kazuya",
+    quotes: "",
+    ewgfProfile: "https://www.ewgf.gg/player/3FiM2MR9J5EB"
+  },
+
+   {
+    nickname: "iMyranz",
+    rank: "God of Destruction I",
+    main: "Xiaoyu",
+    quotes: "余裕余裕！",
+    ewgfProfile: "https://ewgf.gg/player/5B5TNrm4h4ja"
+  },
+
+     {
+    nickname: "ESTEEM UmaLiar",
+    rank: "God of Destruction III",
+    main: "Heihachi",
+    quotes: "Sorya",
+    ewgfProfile: "https://ewgf.gg/player/5YNjLbj6E6ra"
   },
 
 ];
