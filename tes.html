@@ -1,0 +1,12 @@
+<p>Highest Rank: <span id="rank">Loading...</span></p>
+
+<script>
+  fetch("/.netlify/functions/highest-rank")
+    .then((r) => r.json())
+    .then((d) => {
+      document.getElementById("rank").textContent = d.highestRank ?? "N/A";
+    })
+    .catch(() => {
+      document.getElementById("rank").textContent = "N/A";
+    });
+</script>
