@@ -1,38 +1,45 @@
 
 exports.handler = async function () {
     const tekkenId = "3qtdnHGhGJQQ";
-    const url = `https://www.ewgf.gg/player/${tekkenId}`;
 
     try {
-        const response = await fetch(url, {
-            headers: {
-                "User-Agent": "Mozilla/5.0",
-                "Accept": "text/html"
+        const response = await fetch(
+            `https://ewgf.gg/player/${tekkenId}`,
+            {
+                headers: {
+                    "User-Agent":
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Accept": "text/html",
+                    "Accept-Language": "en-US,en;q=0.9"
+                }
             }
-        });
+        );
 
         const html = await response.text();
 
-        const keywords = [
-            "All time highest rank",
-            "allTimeHighestRank",
-            "God of Destruction"
-        ];
-
-        const snippets = {};
-
-        for (const keyword of keywords) {
-            const index = html.toLowerCase().indexOf(
-                keyword.toLowerCase()
-            );
-
-            snippets[keyword] = index !== -1
-                ? html.substring(
-                    Math.max(0, index - 500),
-                    Math.min(html.length, index + 1000)
-                )
-                : "Tidak ditemukan";
+        if (!response.ok) {
+            return {
+                statusCode: response.status,
+                body: JSON.stringify({
+                    error: "EWGF menolak request",
+                    httpStatus: response.status,
+                    pageLength: html.length,
+                    preview: html.substring(0, 500)
+                }, null, 2)
+            };
         }
+
+        const currentRanks = [
+            ...html.matchAll(
+                /\\"currentSeasonRank\\":\\"([^\\"]+)\\"/g
+            )
+        ].map(match => match[1]);
+
+        const highestRanks = [
+            ...html.matchAll(
+                /\\"allTimeHighestRank\\":\\"([^\\"]+)\\"/g
+            )
+        ].map(match => match[1]);
 
         return {
             statusCode: 200,
@@ -41,9 +48,9 @@ exports.handler = async function () {
             },
             body: JSON.stringify({
                 httpStatus: response.status,
-                contentType: response.headers.get("content-type"),
                 pageLength: html.length,
-                snippets
+                currentSeasonRanks: currentRanks,
+                allTimeHighestRanks: highestRanks
             }, null, 2)
         };
 
